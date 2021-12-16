@@ -14,4 +14,19 @@ class Boardroom extends Model
         'description',
 
     ];
+
+    //Checar reservacion
+    public function isAvailable(){
+        $reservations = Reservation::where('boardroom_id', $this->id)
+                                    ->whereBetween('start_time', [request()->start_time, request()->end_time])
+                                    ->get();
+        $reservations2 = Reservation::where('boardroom_id', $this->id)
+                                    ->whereBetween('end_time', [request()->start_time, request()->end_time])
+                                    ->get();
+        if (count($reservations) > 0 || count($reservations2) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

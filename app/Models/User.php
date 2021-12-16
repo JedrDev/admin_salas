@@ -42,4 +42,22 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function isAdmin()
+    {
+        if($this->type === 'ADMIN') {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    // Relacion de uno a muchos con las reservaciones
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class);
+    }
+
+
 }

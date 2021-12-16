@@ -24,3 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => ['admin']],function(){
     Route::resource('boardrooms', App\Http\Controllers\BoardroomController::class)->except(['show','create']);
 });
+
+Route::group(['middleware' => ['auth']],function(){
+    Route::resource('reservations', App\Http\Controllers\ReservationController::class)->only(['index','store','destroy']);
+});

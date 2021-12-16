@@ -11,12 +11,12 @@
                         @if (count($boardrooms) > 0)
                             <table class="table">
                                 <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Descripcion</th>
-                                    <th scope="col">Acciones</th>
-                                </tr>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Descripcion</th>
+                                        <th scope="col">Acciones</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
 
@@ -55,6 +55,15 @@
             @if(session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}
+                </div>
+            @endif
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
             @endif
             <div class="card">
