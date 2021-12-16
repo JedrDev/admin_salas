@@ -9,5 +9,5 @@
 
 ## About Laravel
 
-El proyecto esta hecho con laravel 8.76, requiere PHP 8.0, la aplicacion usa laravel UI con boostrap para el frontend, la aplicacion te permite agregar, editar y elminar las salas que estaran disponible para reservar, el sistema cuenta con un login y registro de usuarios, asi como con la funcionabilidad de un comando para limpiar las reservaciones pasadas, permite agregar un reservacion y comprobando que esta misma sala no este ocupada en ese mismo horario, la aplicacion trae los seeders y migraciones para la base de datos
+El proyecto esta hecho con laravel 8.76, requiere PHP 8.0, la aplicacion usa laravel UI con boostrap para el frontend, la aplicacion te permite agregar, editar y eliminar las salas que estaran disponible para reservar, el sistema cuenta con un login y registro de usuarios, asi como con la funcionabilidad de un comando para limpiar las reservaciones pasadas, permite agregar un reservacion y comprobando que esta misma sala no este ocupada en ese mismo horario, la aplicacion trae los seeders y migraciones para la base de datos
 
